@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 @layer base {
-	body {
-	  @apply text-primary;
-	}
-  }
-  
+    body {
+        @apply text-primary;
+    }
+}
+
+:focus {
+    outline: none;
+}
