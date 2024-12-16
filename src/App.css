@@ -5,3 +5,9 @@
 .nav-shadow {
 	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
+
+li.active {
+	background-color: #FF572220;
+	transition-property: background-color;
+	transition-timing-function: ease-out;
+}

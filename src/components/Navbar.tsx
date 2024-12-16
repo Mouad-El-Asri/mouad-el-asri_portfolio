@@ -8,12 +8,22 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faSearch } from "@fortawesome/free-solid-svg-icons";
 import "@/App.css";
+import { useState } from "react";
 
 const Navbar = () => {
+	const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+	const handleNavItemClick = (index: number) => {
+		setActiveIndex(index);
+		setTimeout(() => {
+			setActiveIndex(null);
+		}, 500);
+	}
+
     return (
         <>
-            <nav>
-                <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-8 overflow-hidden nav-shadow">
+            <nav className="fixed inset-x-0 top-0 nav-shadow">
+                <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-8 overflow-hidden">
                     <a href="index.html">
                         <img src={moelAsrImg} alt="moel-asr" />
                     </a>
@@ -26,8 +36,8 @@ const Navbar = () => {
                                 "Projects",
                                 "Blog",
                                 "Contact",
-                            ].map((item) => (
-                                <li className="px-5 h-full flex items-center hover:text-secondary active:bg-accent transition-colors duration-500">
+                            ].map((item, index) => (
+                                <li key={index} onClick={() => handleNavItemClick(index)} className={`${activeIndex == index ? 'active' : ''} px-5 h-full flex items-center hover:text-secondary transition-[color] duration-300`}>
                                     <a
                                         className="focus:text-secondary transition-colors duration-500"
                                         href="#"
