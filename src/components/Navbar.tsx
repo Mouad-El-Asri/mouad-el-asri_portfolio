@@ -1,4 +1,4 @@
-import moelAsrImg from "../assets/moel-asr.png";
+import moelAsrImg from "@/assets/moel-asr.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
@@ -9,8 +9,9 @@ import {
 import { faEnvelope, faSearch } from "@fortawesome/free-solid-svg-icons";
 import "@/App.css";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const handleNavItemClick = (index: number) => {
@@ -20,17 +21,19 @@ const Navbar = () => {
         }, 500);
     };
 
+    const location = useLocation();
+
     return (
         <nav className="fixed inset-x-0 top-0 nav-shadow bg-white z-10">
             <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-10 overflow-hidden">
-                <a href="index.html">
+                <Link to="/">
                     <img
                         src={moelAsrImg}
                         alt="moel-asr"
                         width={250}
                         height={60}
                     />
-                </a>
+                </Link>
                 <div className="h-[100px] flex justify-center items-center">
                     <ul className="list-none flex items-center h-full text-lg">
                         {[
@@ -41,22 +44,25 @@ const Navbar = () => {
                             "Projects",
                             "Blog",
                             "Contact",
-                        ].map((item, index) => (
-                            <li
-                                key={index}
-                                onClick={() => handleNavItemClick(index)}
-                                className={`${
-                                    activeIndex == index ? "active" : ""
-                                } px-5 h-full flex items-center hover:text-secondary transition-[color] duration-300`}
-                            >
-                                <a
-                                    className="focus:text-secondary transition-colors duration-500"
-                                    href="#"
+                        ].map((item, index) => {
+                            const isActive = location.pathname === (item === "Home" ? "/" : `/${item.toLowerCase()}`);
+                            return (
+                                <li
+                                    key={index}
+                                    onClick={() => handleNavItemClick(index)}
+                                    className={`${
+                                        activeIndex == index ? "active" : ""
+                                    } px-5 h-full flex items-center hover:text-secondary transition-[color] duration-300`}
                                 >
-                                    {item}
-                                </a>
-                            </li>
-                        ))}
+                                    <Link
+                                        className={`focus:text-secondary transition-colors duration-500 ${isActive ? "font-medium text-secondary" : ""}`}
+                                        to={`/${item === "Home" ? "" : item}`}
+                                    >
+                                        {item}
+                                    </Link>
+                                </li>
+                            );
+                        })}
                     </ul>
                     <div className="mx-5 flex items-center justify-center border rounded-md p-2 text-gray-500">
                         <FontAwesomeIcon

@@ -1,13 +1,14 @@
 import moelAsrFooterImg from "@/assets/moel-asr-footer.png";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer className="bg-neutral relative top-[100px] z-10 w-full">
             <div className="text-white">
                 <div className="flex justify-between items-center px-10 py-2">
-                    <a href="index.html">
+                    <Link to="/">
                         <img src={moelAsrFooterImg} alt="moel-asr" />
-                    </a>
+                    </Link>
                     <ul className="flex gap-8 text-base">
                         <li className="cursor-pointer">
                             <a href="#">Privacy Policy</a>

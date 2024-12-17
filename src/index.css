@@ -10,10 +10,26 @@
 
 @layer base {
     body {
-		@apply relative w-full min-h-screen bg-white text-primary;
+        @apply relative w-full min-h-screen bg-white text-primary;
     }
 }
 
 :focus {
     outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #535353;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #353535;
 }
