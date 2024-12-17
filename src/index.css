@@ -10,7 +10,7 @@
 
 @layer base {
     body {
-        @apply text-primary;
+		@apply relative w-full min-h-screen bg-white text-primary;
     }
 }
 
