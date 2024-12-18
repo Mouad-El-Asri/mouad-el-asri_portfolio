@@ -8,24 +8,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faSearch } from "@fortawesome/free-solid-svg-icons";
 import "@/App.css";
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-    const handleNavItemClick = (index: number) => {
-        setActiveIndex(index);
-        setTimeout(() => {
-            setActiveIndex(null);
-        }, 500);
-    };
-
     const location = useLocation();
 
     return (
         <nav className="fixed inset-x-0 top-0 nav-shadow bg-white z-10">
-            <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-10 overflow-hidden">
+            <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-10">
                 <Link to="/">
                     <img
                         src={moelAsrImg}
@@ -44,18 +34,20 @@ const Navbar: React.FC = () => {
                             "Projects",
                             "Blog",
                             "Contact",
-                        ].map((item, index) => {
-                            const isActive = location.pathname === (item === "Home" ? "/" : `/${item.toLowerCase()}`);
+                        ].map((item) => {
+                            const isActive =
+                                location.pathname ===
+                                (item === "Home" ? "/" : `/${item}`);
                             return (
                                 <li
-                                    key={index}
-                                    onClick={() => handleNavItemClick(index)}
                                     className={`${
-                                        activeIndex == index ? "active" : ""
+                                        isActive
+                                            ? "font-medium text-secondary bg-accent"
+                                            : ""
                                     } px-5 h-full flex items-center hover:text-secondary transition-[color] duration-300`}
                                 >
                                     <Link
-                                        className={`focus:text-secondary transition-colors duration-500 ${isActive ? "font-medium text-secondary" : ""}`}
+                                        className={`focus:text-secondary transition-colors duration-500`}
                                         to={`/${item === "Home" ? "" : item}`}
                                     >
                                         {item}
@@ -75,7 +67,7 @@ const Navbar: React.FC = () => {
                         {[
                             {
                                 icon: faEnvelope,
-                                href: "#",
+                                href: "mailto:elasri.mouad.2002@gmail.com",
                                 color: "text-[#999999]",
                                 hoverFocusBg:
                                     "hover:bg-[#999999] focus:bg-[#999999]",
@@ -84,7 +76,7 @@ const Navbar: React.FC = () => {
                             },
                             {
                                 icon: faLinkedin,
-                                href: "#",
+                                href: "https://www.linkedin.com/in/mouad-el-asri",
                                 color: "text-[#0077b5]",
                                 hoverFocusBg:
                                     "hover:bg-[#0077b5] focus:bg-[#0077b5]",
@@ -93,7 +85,7 @@ const Navbar: React.FC = () => {
                             },
                             {
                                 icon: faGithub,
-                                href: "#",
+                                href: "https://github.com/Mouad-El-Asri",
                                 color: "text-[#181717]",
                                 hoverFocusBg:
                                     "hover:bg-[#181717] focus:bg-[#181717]",
@@ -102,7 +94,7 @@ const Navbar: React.FC = () => {
                             },
                             {
                                 icon: faInstagram,
-                                href: "#",
+                                href: "https://www.instagram.com/mouad_el_asriii",
                                 color: "text-[#E4405F]",
                                 hoverFocusBg:
                                     "hover:bg-[#E4405F] focus:bg-[#E4405F]",
@@ -111,7 +103,7 @@ const Navbar: React.FC = () => {
                             },
                             {
                                 icon: faHackerrank,
-                                href: "#",
+                                href: "https://www.hackerrank.com/profile/elasri_mouad_201",
                                 color: "text-[#2EC866]",
                                 hoverFocusBg:
                                     "hover:bg-[#2EC866] focus:bg-[#2EC866]",
@@ -128,6 +120,8 @@ const Navbar: React.FC = () => {
                             }) => (
                                 <a
                                     href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={`flex items-center justify-center w-9 h-9 leading-none no-underline ${color} ${hoverFocusBg} ${hoverFocusColor} hover:rounded-full focus:rounded-full transition-all duration-500`}
                                 >
                                     <FontAwesomeIcon

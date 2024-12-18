@@ -6,8 +6,38 @@
 	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
-li.active {
-	background-color: #FF572220;
-	transition-property: background-color;
-	transition-timing-function: ease-out;
+@keyframes back-to-top-show {
+	from {
+	   opacity: 0;
+	   bottom: -20%;
+	}
+	to {
+	   opacity: 0.9;
+	   bottom: 2%;
+	}
+ }
+
+@keyframes back-to-top-hide {
+	from {
+	   opacity: 0.9;
+	   bottom: 2%;
+	}
+	to {
+	   opacity: 0;
+	   bottom: -20%;
+	}
+ }
+
+.back-to-top-hide {
+	animation-name: back-to-top-hide;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.back-to-top-show {
+	animation-name: back-to-top-show;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
 }

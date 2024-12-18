@@ -3,8 +3,8 @@ import homeAudio from "@/assets/path-to-you.mp3";
 
 const Slider: React.FC = () => {
     return (
-        <main className="relative top-[100px] w-full h-full -z-10 bg-slate-900 overflow-hidden">
-            <video autoPlay muted loop className="w-full h-full object-cover">
+        <main className="relative top-[100px] w-full h-screen 2xl:h-full -z-10 bg-slate-900 overflow-hidden">
+            <video autoPlay muted loop className="w-full h-screen 2xl:h-full object-cover">
                 <source src={homeVideo} type="video/mp4" />
             </video>
 
@@ -12,11 +12,11 @@ const Slider: React.FC = () => {
                 <source src={homeAudio} type="audio/mpeg" />
             </audio>
 
-            <div className="h-screen flex flex-col gap-6 justify-center items-center absolute inset-0 z-50 text-center box-border text-white">
-                <h1 className="uppercase text-6xl font-medium tracking-[2px]">
+            <div className="h-screen flex flex-col gap-6 justify-center items-center absolute inset-0 z-50 text-center box-border text-white px-6">
+                <h1 className="uppercase text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-[2px]">
                     Computer Architect & Changemaker
                 </h1>
-                <h3 className="italic uppercase text-3xl font-medium tracking-[2px]">
+                <h3 className="italic uppercase text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium tracking-[2px]">
                     {"< "} <span className="text-green-600">FUTURE:</span>{" "}
                     {"IS_ LOADING />"}
                 </h3>
