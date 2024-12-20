@@ -1,9 +1,39 @@
 import moelAsrFooterImg from "@/assets/moel-asr-footer.png";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
+    const footerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const updateFooterHeight = () => {
+            if (footerRef.current) {
+                const footerHeight = footerRef.current.offsetHeight;
+                localStorage.setItem("footerHeight", footerHeight.toString());
+            }
+        };
+
+        const timer = setTimeout(() => {
+            updateFooterHeight();
+        }, 100);
+
+        const handleResize = () => {
+            clearTimeout(timer);
+            setTimeout(() => {
+                updateFooterHeight();
+            }, 100);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
-        <footer className="bg-neutral w-full z-20 relative">
+        <footer ref={footerRef} className="bg-neutral w-full z-20 relative bottom-0">
             <div className="text-white">
                 <div className="flex flex-col md:flex-row justify-between items-center px-5 md:px-24 py-3 md:py-2 space-y-4 md:space-y-0">
                     <Link to="/">
@@ -18,9 +48,13 @@ const Footer: React.FC = () => {
                             <a href="#">Privacy Policy</a>
                         </li>
                         <li className="cursor-pointer">
-						<a href="/terms-of-service" target="_blank" rel="noopener noreferrer" >
+                            <a
+                                href="/terms-of-service"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 Terms of Service
-                        </a>
+                            </a>
                         </li>
                     </ul>
                 </div>

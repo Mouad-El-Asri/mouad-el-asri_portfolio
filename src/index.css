@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 @layer base {
     body {
         @apply relative w-full min-h-screen bg-white text-primary;

@@ -7,7 +7,7 @@ const TermsOfService = () => {
             <PageHeader title={"Terms of Service"} />
             <div className="py-16">
                 <div>
-                    <h2 className="uppercase text-[1.75rem] mb-7">Overview</h2>
+                    <h2 className="uppercase text-[1.75rem] mb-5">Overview</h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
                         <p>
                             This website is operated by{" "}
@@ -32,8 +32,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 1 – Use of Website
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
@@ -45,8 +45,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 2 – Intellectual Property
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
@@ -62,8 +62,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 3 – User-Generated Content
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
@@ -77,8 +77,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 4 – Third-Party Links
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
@@ -94,8 +94,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 5 – Limitation of Liability
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
@@ -107,8 +107,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 6 – Changes to the Terms
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
@@ -121,8 +121,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 7 – Governing Law
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">
@@ -135,8 +135,8 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-12">
-                    <h2 className="uppercase text-[1.75rem] mb-7">
+                <div className="pt-14">
+                    <h2 className="uppercase text-[1.75rem] mb-5">
                         SECTION 8 – CONTACT INFORMATION
                     </h2>
                     <div className="text-lg space-y-7 text-neutral text-justify">

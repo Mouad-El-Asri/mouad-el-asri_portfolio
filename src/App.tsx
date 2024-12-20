@@ -4,6 +4,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BackToTopButton from "./components/BackToTopButton";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 		<Routes>
 			<Route path="/" element={<Home />} />
 			<Route path="/terms-of-service" element={<TermsOfService />} />
+			<Route path="/*" element={<NotFound />} />
 		</Routes>
 		<BackToTopButton />
 		<Footer />

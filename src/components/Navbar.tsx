@@ -40,6 +40,7 @@ const Navbar: React.FC = () => {
                                 (item === "Home" ? "/" : `/${item}`);
                             return (
                                 <li
+									key={item}
                                     className={`${
                                         isActive
                                             ? "font-medium text-secondary bg-accent"
@@ -119,6 +120,7 @@ const Navbar: React.FC = () => {
                                 hoverFocusColor,
                             }) => (
                                 <a
+									key={href}
                                     href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
