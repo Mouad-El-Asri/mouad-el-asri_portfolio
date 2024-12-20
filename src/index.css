@@ -14,7 +14,7 @@ html {
 
 @layer base {
     body {
-        @apply relative w-full min-h-screen bg-white text-primary;
+        @apply p-0 m-0;
     }
 }
 

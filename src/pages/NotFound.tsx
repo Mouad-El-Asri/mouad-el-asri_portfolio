@@ -1,18 +1,10 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
-    useEffect(() => {
-        const footerHeight = localStorage.getItem('footerHeight');
-		const notFound = document.getElementById('not-found');
-		notFound!.style.height = `calc(100vh - ${footerHeight}px)`;
-		console.log(footerHeight);
-    }, []);
-
     return (
         <div
 			id="not-found"
-            className={`w-full flex flex-col items-center justify-center gap-5 text-center px-6 md:px-12 pt-24`}
+            className={`w-full flex flex-col items-center justify-center gap-5 text-center px-6 md:px-12`}
         >
             <h1 className="text-7xl md:text-9xl lg:text-[162px] tracking-tight font-extrabold text-secondary">
                 404

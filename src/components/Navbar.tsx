@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     const location = useLocation();
 
     return (
-        <nav className="fixed inset-x-0 top-0 nav-shadow bg-white z-10">
+        <nav className="sticky inset-x-0 top-0 nav-shadow bg-white z-10">
             <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-10">
                 <Link to="/">
                     <img
