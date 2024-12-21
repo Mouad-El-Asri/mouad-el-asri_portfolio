@@ -30,6 +30,7 @@ const BackToTopButton = () => {
 
     return (
         <button
+            aria-label="Back to top"
             onClick={scrollToTop}
             className={`${
                 isVisible ? "back-to-top-show" : "back-to-top-hide"

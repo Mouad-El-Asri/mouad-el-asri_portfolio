@@ -1,25 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import TermsOfService from "./pages/TermsOfService";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import BackToTopButton from "./components/BackToTopButton";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import BackToTopButton from "@/components/BackToTopButton";
+import AppRoutes from "@/routes/AppRoutes";
 
 function App() {
     return (
         <Router>
-            <div className="flex flex-col justify-between min-h-screen text-primary">
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route
-                        path="/terms-of-service"
-                        element={<TermsOfService />}
-                    />
-                    <Route path="/*" element={<NotFound />} />
-                </Routes>
-                <BackToTopButton />
+            <div className="flex flex-col justify-between w-full min-h-screen text-primary">
+                <header>
+                    <Navbar />
+                </header>
+                <main>
+                    <AppRoutes />
+                    <BackToTopButton />
+                </main>
                 <Footer />
             </div>
         </Router>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const TermsOfService = () => {
     return (
-        <div className="mt-[100px] px-96">
+        <div className="px-96">
             <PageHeader title={"Terms of Service"} />
             <div className="py-16">
                 <div>
