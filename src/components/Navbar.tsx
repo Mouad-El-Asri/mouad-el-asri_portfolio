@@ -6,41 +6,59 @@ import {
     faInstagram,
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+	faCertificate,
+    faComment,
+    faEnvelope,
+    faGear,
+    faHome,
+    faImage,
+    faPenToSquare,
+    faSearch,
+    faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import "@/App.css";
 import { Link, useLocation } from "react-router-dom";
+import Hamburger from "hamburger-react";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar: React.FC = () => {
     const location = useLocation();
+    const [isOpen, setOpen] = useState(false);
 
     return (
         <nav className="sticky inset-x-0 top-0 nav-shadow bg-white z-10 overflow-hidden">
-            <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-10">
+            <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-5 lg:p-10">
                 <Link to="/">
                     <img
                         src={moelAsrImg}
                         alt="moel-asr"
-                        width={250}
-                        height={60}
+                        className="h-auto w-[180px] md:w-[220px] lg:w-[250px]"
                     />
                 </Link>
-                <div className="h-[100px] flex justify-center items-center">
+
+                <div className="lg:hidden flex items-center">
+                    <Hamburger toggled={isOpen} size={24} toggle={setOpen} />
+                </div>
+
+                <div className="hidden lg:flex h-[100px] justify-center items-center">
                     <ul className="list-none flex items-center h-full text-lg">
                         {[
-                            "Home",
-                            "About",
-                            "Certifications",
-                            "Gallery",
-                            "Projects",
-                            "Blog",
-                            "Contact",
-                        ].map((item) => {
+                            { item: "Home", icon: faHome },
+                            { item: "About", icon: faUser },
+                            { item: "Certifications", icon: faCertificate },
+                            { item: "Projects", icon: faGear },
+                            { item: "Gallery", icon: faImage },
+                            { item: "Blog", icon: faPenToSquare },
+                            { item: "Contact", icon: faComment },
+                        ].map(({ item, icon }) => {
                             const isActive =
                                 location.pathname ===
                                 (item === "Home" ? "/" : `/${item}`);
                             return (
                                 <li
-									key={item}
+                                    key={item}
                                     className={`${
                                         isActive
                                             ? "font-medium text-secondary bg-accent"
@@ -51,6 +69,10 @@ const Navbar: React.FC = () => {
                                         className={`focus:text-secondary transition-colors duration-500`}
                                         to={`/${item === "Home" ? "" : item}`}
                                     >
+                                        <FontAwesomeIcon
+                                            icon={icon}
+                                            className="w-4 h-4 mr-2"
+                                        />
                                         {item}
                                     </Link>
                                 </li>
@@ -120,7 +142,7 @@ const Navbar: React.FC = () => {
                                 hoverFocusColor,
                             }) => (
                                 <a
-									key={href}
+                                    key={href}
                                     href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -136,6 +158,56 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </div>
+            {isOpen && (
+                <AnimatePresence>
+                    <motion.div
+                        className="lg:hidden bg-white py-4 w-full"
+                        initial={{ opacity: 0, y: -25 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -25 }}
+                        transition={{ duration: 0.4 }}
+                    >
+                        <ul className="list-none flex flex-col items-start">
+                            {[
+                                { item: "Home", icon: faHome },
+								{ item: "About", icon: faUser },
+								{ item: "Certifications", icon: faCertificate },
+								{ item: "Projects", icon: faGear },
+								{ item: "Gallery", icon: faImage },
+								{ item: "Blog", icon: faPenToSquare },
+								{ item: "Contact", icon: faComment },
+                            ].map(({ item, icon }) => {
+                                const isActive =
+                                    location.pathname ===
+                                    (item === "Home" ? "/" : `/${item}`);
+                                return (
+                                    <li
+                                        key={item}
+                                        className={`${
+                                            isActive
+                                                ? "font-medium text-secondary bg-accent"
+                                                : ""
+                                        } w-full px-8 py-2 text-lg hover:text-secondary`}
+                                    >
+                                        <Link
+                                            to={`/${
+                                                item === "Home" ? "" : item
+                                            }`}
+                                            onClick={() => setOpen(false)}
+                                        >
+											<FontAwesomeIcon
+                                            icon={icon}
+                                            className="w-4 h-4 mr-2"
+                                        />
+                                            {item}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </motion.div>
+                </AnimatePresence>
+            )}
         </nav>
     );
 };
