@@ -29,12 +29,12 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className="sticky inset-x-0 top-0 nav-shadow bg-white z-10 overflow-hidden">
-            <div className="h-[100px] border-b-[1px] border-b-gray-200 flex justify-between items-center p-5 lg:p-10">
+            <div className="h-24 border-b-[1px] border-b-gray-200 flex justify-between items-center p-5 lg:p-10">
                 <Link to="/">
                     <img
                         src={moelAsrImg}
                         alt="moel-asr"
-                        className="h-auto w-[180px] md:w-[220px] lg:w-[250px]"
+                        className="h-auto w-[160px] sm:w-[180px] md:w-[200px] lg:w-[225px]"
                     />
                 </Link>
 
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
                     <Hamburger toggled={isOpen} size={24} toggle={setOpen} />
                 </div>
 
-                <div className="hidden lg:flex h-[100px] justify-center items-center">
+                <div className="hidden lg:flex h-24 justify-center items-center">
                     <ul className="list-none flex items-center h-full text-lg">
                         {[
                             { item: "Home", icon: faHome },

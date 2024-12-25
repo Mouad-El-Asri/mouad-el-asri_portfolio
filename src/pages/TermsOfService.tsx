@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const TermsOfService = () => {
     return (
-        <div className="px-96">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-96">
             <PageHeader title={"Terms of Service"} />
-            <div className="py-16">
+            <div className="py-8 sm:py-12 md:py-16">
                 <div>
-                    <h2 className="uppercase text-[1.75rem] mb-5">Overview</h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">Overview</h2>
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             This website is operated by{" "}
                             <span className="font-medium">Mouad El Asri</span>.
@@ -32,11 +32,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 1 – Use of Website
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             You agree to use the Website for lawful purposes
                             only and in accordance with these Terms. You may not
@@ -45,11 +45,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 2 – Intellectual Property
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             All content on the Website, including but not
                             limited to text, images, graphics, videos, logos,
@@ -62,11 +62,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 3 – User-Generated Content
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             By submitting any content to the Website, you grant
                             us a worldwide, royalty-free, and non-exclusive
@@ -77,11 +77,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 4 – Third-Party Links
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             Our Website may contain links to third-party
                             websites or services that are not owned or
@@ -94,11 +94,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 5 – Limitation of Liability
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             To the fullest extent permitted by law, this Website
                             is not liable for any indirect, incidental, or
@@ -107,11 +107,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 6 – Changes to the Terms
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             We reserve the right to update or modify these Terms
                             at any time. Any changes will be effective
@@ -121,11 +121,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 7 – Governing Law
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             These Terms of Service and any separate agreements
                             whereby we provide you Services shall be governed by
@@ -135,11 +135,11 @@ const TermsOfService = () => {
                         </p>
                     </div>
                 </div>
-                <div className="pt-14">
-                    <h2 className="uppercase text-[1.75rem] mb-5">
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
                         SECTION 8 – CONTACT INFORMATION
                     </h2>
-                    <div className="text-lg space-y-7 text-neutral text-justify">
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             Questions about the Terms of Service should be sent
                             to us via the <Link to="/contact" className="font-medium text-secondary">Contact Form.</Link>
