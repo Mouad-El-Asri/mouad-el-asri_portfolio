@@ -15,7 +15,13 @@ const Footer: React.FC = () => {
                     </Link>
                     <ul className="flex gap-8 text-base">
                         <li className="cursor-pointer">
-                            <a href="#">Privacy Policy</a>
+                            <a
+                                href="/privacy-policy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Privacy Policy
+                            </a>
                         </li>
                         <li className="cursor-pointer">
                             <a
