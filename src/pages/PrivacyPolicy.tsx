@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
                 </div>
                 <div className="pt-6 sm:pt-8 md:pt-10">
                     <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
-                        PERSONAL INFORMATION WE COLLECT
+                        Personal information we collect
                     </h2>
                     <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
@@ -57,7 +57,7 @@ const PrivacyPolicy = () => {
                 </div>
                 <div className="pt-10 sm:pt-12 md:pt-14">
                     <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
-                        HOW DO WE USE YOUR INFORMATION?
+                        How do we use your information?
                     </h2>
                     <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
@@ -74,19 +74,41 @@ const PrivacyPolicy = () => {
                 </div>
                 <div className="pt-10 sm:pt-12 md:pt-14">
                     <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
-                        Changes to this Privacy Policy
+                        Legal Disclosure
                     </h2>
                     <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
-                            We may update Our Privacy Policy from time to time.
-                            We will notify You of any changes by posting the new
-                            Privacy Policy on this page.
+                            We may disclose your personal data if required to do
+                            so by law or if we believe that such action is
+                            necessary to:
+                        </p>
+                        <ul className="list-disc pl-5">
+                            <li>Comply with legal obligations.</li>
+                            <li>
+                                Protect the rights, property, or safety of the
+                                Website, its users, or the public.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="pt-10 sm:pt-12 md:pt-14">
+                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
+                        Security of Your Personal Data
+                    </h2>
+                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
+                        <p>
+                            To protect your personal information, we take
+                            reasonable precautions and follow industry best
+                            practices to make sure it is not inappropriately
+                            lost, misused, accessed, disclosed, altered or
+                            destroyed.
                         </p>
                         <p>
-                            You are advised to review this Privacy Policy
-                            periodically for any changes. Changes to this
-                            Privacy Policy are effective when they are posted on
-                            this page.
+                            While we strive to use commercially acceptable means
+                            to protect your personal data, please be aware that
+                            no method of transmission over the Internet or
+                            electronic storage is 100% secure. Therefore, we
+                            cannot guarantee its absolute security.
                         </p>
                     </div>
                 </div>
@@ -111,22 +133,19 @@ const PrivacyPolicy = () => {
                 </div>
                 <div className="pt-10 sm:pt-12 md:pt-14">
                     <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
-                        Security of Your Personal Data
+                        Changes to this Privacy Policy
                     </h2>
                     <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
-                            To protect your personal information, we take
-                            reasonable precautions and follow industry best
-                            practices to make sure it is not inappropriately
-                            lost, misused, accessed, disclosed, altered or
-                            destroyed.
+                            We may update Our Privacy Policy from time to time.
+                            We will notify You of any changes by posting the new
+                            Privacy Policy on this page.
                         </p>
                         <p>
-                            While we strive to use commercially acceptable means
-                            to protect your personal data, please be aware that
-                            no method of transmission over the Internet or
-                            electronic storage is 100% secure. Therefore, we
-                            cannot guarantee its absolute security.
+                            You are advised to review this Privacy Policy
+                            periodically for any changes. Changes to this
+                            Privacy Policy are effective when they are posted on
+                            this page.
                         </p>
                     </div>
                 </div>
