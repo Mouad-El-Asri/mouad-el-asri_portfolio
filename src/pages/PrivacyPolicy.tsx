@@ -8,6 +8,9 @@ const PrivacyPolicy = () => {
             <div className="py-8 sm:py-12 md:py-16">
                 <div>
                     <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
+                        <p className="text-sm sm:text-base text-neutral-light">
+                            Last updated: December 25, 2024
+                        </p>
                         <p>
                             This Privacy Policy describes how your personal
                             information is collected, used, and shared when you
@@ -29,14 +32,13 @@ const PrivacyPolicy = () => {
                     <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
                         <p>
                             When you visit the Website, we automatically collect
-                            certain information about your device. This includes
-                            details about your web browser, IP address, time
-                            zone, time spent on the Website, and some of the
-                            cookies installed on your device. Additionally, as
-                            you browse the Website, we collect information about
-                            the individual web pages that you visit, the
-                            Websites or search terms referred you to the
-                            Website, and how you interact with the content.
+                            certain information about your device, including
+                            your web browser, IP address, time zone, time spent
+                            on the Website, and cookies installed on your
+                            device. We also collect information about the
+                            individual web pages you visit, the websites or
+                            search terms that referred you to the Website, and
+                            how you interact with the content.
                         </p>
                         <p>
                             We use “Cookies” which are data files placed on your
@@ -46,12 +48,11 @@ const PrivacyPolicy = () => {
                             analyze Website performance.
                         </p>
                         <p>
-                            If you contact us directly through a form, we may
+                            If you contact us using the contact form, we may
                             collect personal details you voluntarily provide,
-                            such as your name, email address, and any other
-                            information you include in your message. This
-                            information is used to respond to your inquiries and
-                            improve your user experience.
+                            such as your first and last name, email address, and
+                            the contents of your message. This information is
+                            used solely to respond to your inquiries.
                         </p>
                     </div>
                 </div>
@@ -63,32 +64,12 @@ const PrivacyPolicy = () => {
                         <p>
                             We use the information we collect to improve and
                             personalize your experience on the Website. This
-                            includes analyzing Website traffic, responding to
-                            your inquiries, and enhancing the content and
-                            functionality of the Website. We may also use your
-                            information to communicate with you regarding any
-                            specific requests or inquiries you have made through
-                            the Website.
+                            includes analyzing website traffic, responding to
+                            inquiries, and enhancing the content and
+                            functionality. We may also use your information to
+                            communicate with you about specific requests or
+                            inquiries made through the Website’s contact form.
                         </p>
-                    </div>
-                </div>
-                <div className="pt-10 sm:pt-12 md:pt-14">
-                    <h2 className="uppercase text-xl sm:text-2xl md:text-[1.75rem] lg:text-3xl mb-5">
-                        Legal Disclosure
-                    </h2>
-                    <div className="text-base sm:text-lg space-y-6 md:space-y-7 text-neutral text-justify">
-                        <p>
-                            We may disclose your personal data if required to do
-                            so by law or if we believe that such action is
-                            necessary to:
-                        </p>
-                        <ul className="list-disc pl-5">
-                            <li>Comply with legal obligations.</li>
-                            <li>
-                                Protect the rights, property, or safety of the
-                                Website, its users, or the public.
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div className="pt-10 sm:pt-12 md:pt-14">
