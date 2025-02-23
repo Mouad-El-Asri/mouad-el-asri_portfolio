@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                         {[
                             { item: "Home", icon: faHome },
                             { item: "About", icon: faUser },
-                            { item: "Certifications", icon: faCertificate },
+                            { item: "Certificates", icon: faCertificate },
                             { item: "Projects", icon: faGear },
                             { item: "Gallery", icon: faImage },
                             { item: "Blog", icon: faPenToSquare },
@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
                             {[
                                 { item: "Home", icon: faHome },
 								{ item: "About", icon: faUser },
-								{ item: "Certifications", icon: faCertificate },
+								{ item: "Certificates", icon: faCertificate },
 								{ item: "Projects", icon: faGear },
 								{ item: "Gallery", icon: faImage },
 								{ item: "Blog", icon: faPenToSquare },
