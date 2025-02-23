@@ -14,7 +14,7 @@ const Slider: React.FC = () => {
 
             <div className="h-full flex flex-col gap-6 justify-center items-center absolute inset-0 text-center box-border text-white px-5">
                 <h1 className="uppercase text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-[2px]">
-                    Research Assistant @ Oracle R&D Center, Morocco
+                    Research Assistant @ Oracle R&D Center
                 </h1>
                 <h3 className="italic uppercase text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium tracking-[2px]">
                     {"< "} <span className="text-green-600">FUTURE:</span>{" "}
